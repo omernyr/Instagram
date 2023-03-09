@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
         field.layer.masksToBounds = true
-        field.layer.cornerRadius = Constants.cornerRadius
+        field.layer.cornerRadius = Constants.cornerRadius 
         return field
     }()
     private let passwordTextField: UITextField = {

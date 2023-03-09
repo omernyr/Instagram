@@ -25,6 +25,7 @@
 		520084C629B78515004EF48E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520084C529B78515004EF48E /* DatabaseManager.swift */; };
 		520084C829B785B0004EF48E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520084C729B785B0004EF48E /* AuthManager.swift */; };
 		520084CB29B7AB80004EF48E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520084CA29B7AB80004EF48E /* StorageManager.swift */; };
+		523B9E2F29BA4F0400ED1249 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B9E2E29BA4F0400ED1249 /* Extensions.swift */; };
 		5285155A29B7740B006500C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285155929B7740B006500C4 /* AppDelegate.swift */; };
 		5285155C29B7740B006500C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285155B29B7740B006500C4 /* SceneDelegate.swift */; };
 		5285155E29B7740B006500C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285155D29B7740B006500C4 /* HomeViewController.swift */; };
@@ -55,6 +56,7 @@
 		520084C529B78515004EF48E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		520084C729B785B0004EF48E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		520084CA29B7AB80004EF48E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		523B9E2E29BA4F0400ED1249 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5285155629B7740B006500C4 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5285155929B7740B006500C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5285155B29B7740B006500C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				520084C529B78515004EF48E /* DatabaseManager.swift */,
 				520084C729B785B0004EF48E /* AuthManager.swift */,
 				520084CA29B7AB80004EF48E /* StorageManager.swift */,
+				523B9E2E29BA4F0400ED1249 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				5285155E29B7740B006500C4 /* HomeViewController.swift in Sources */,
 				520084C129B780F3004EF48E /* SearchResultsViewController.swift in Sources */,
 				520084AA29B778D1004EF48E /* NotificationsViewController.swift in Sources */,
+				523B9E2F29BA4F0400ED1249 /* Extensions.swift in Sources */,
 				520084BD29B780DD004EF48E /* SettingsViewController.swift in Sources */,
 				520084C829B785B0004EF48E /* AuthManager.swift in Sources */,
 				520084AC29B778E1004EF48E /* ProfileViewController.swift in Sources */,
