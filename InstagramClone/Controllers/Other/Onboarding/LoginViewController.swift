@@ -23,19 +23,23 @@ class LoginViewController: UIViewController {
         field.autocorrectionType = .no
         field.layer.masksToBounds = true
         field.layer.cornerRadius = Constants.cornerRadius
+        field.layer.borderWidth = 1.0
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
         field.backgroundColor = .secondarySystemBackground
         return field
     }()
     private let passwordTextField: UITextField = {
         let field = UITextField()
         field.placeholder = "Password..."
-        field.returnKeyType = .next
+        field.returnKeyType = .continue
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
         field.layer.masksToBounds = true
         field.layer.cornerRadius = Constants.cornerRadius
+        field.layer.borderWidth = 1.0
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
         field.backgroundColor = .secondarySystemBackground
         return field
         
@@ -78,6 +82,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
         view.backgroundColor = .systemBackground
     }
     
@@ -143,4 +149,16 @@ class LoginViewController: UIViewController {
     @objc private func didTapTermsButton() {}
     @objc private func didTapPrivacyButton() {}
     @objc private func didTapCreateAccountButton() {}
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            didTapLoginButton()
+        }
+        
+        return true
+    }
 }
