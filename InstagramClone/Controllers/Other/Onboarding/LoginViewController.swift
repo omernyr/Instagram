@@ -184,7 +184,9 @@ class LoginViewController: UIViewController {
             username = usernameEmail
         }
         
-        AuthManager.shared.loginUser(username: username, email: usernameEmail, password: password) { success in
+        AuthManager.shared.loginUser(username: username,
+                                     email: usernameEmail,
+                                     password: password) { success in
             
             DispatchQueue.main.async {
                 if success {
@@ -202,7 +204,7 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-    }
+    } 
     @objc private func didTapTermsButton() {
         
         guard let url = URL(string: "https://www.instagram.com/terms/accept/") else { return }
