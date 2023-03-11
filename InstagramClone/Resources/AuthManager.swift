@@ -19,7 +19,6 @@ public class AuthManager {
          */
         
         DatabaseManager.shared.canCreateNewUser(with: email, username: username) { canCreate in
-            
             if canCreate {
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
                     guard error == nil, result != nil else {
@@ -50,7 +49,8 @@ public class AuthManager {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 guard authResult != nil, error == nil else {
                     completion(false)
-                    return }
+                    return
+                }
                 
                 completion(true)
             }

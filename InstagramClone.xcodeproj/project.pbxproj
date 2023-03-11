@@ -169,9 +169,9 @@
 		520084C429B78352004EF48E /* General */ = {
 			isa = PBXGroup;
 			children = (
+				520084BC29B780DD004EF48E /* SettingsViewController.swift */,
 				520084AD29B77901004EF48E /* PostViewController.swift */,
 				520084AF29B77920004EF48E /* PublishPostViewController.swift */,
-				520084BC29B780DD004EF48E /* SettingsViewController.swift */,
 				520084B129B77935004EF48E /* ListViewController.swift */,
 				520084BE29B780EC004EF48E /* SearchViewController.swift */,
 				520084C029B780F3004EF48E /* SearchResultsViewController.swift */,
