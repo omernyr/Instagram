@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
         
         /// Check auth status
         handleNotAuthenticated()
+        
     }
     
     private func handleNotAuthenticated() {
