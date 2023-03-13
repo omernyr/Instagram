@@ -31,7 +31,7 @@ class ExploreViewController: UIViewController {
         collectionView?.dataSource = self
         collectionView?.delegate = self
         
-        guard let collectionView = collectionView else { return }
+        guard let collectionView = collectionView else { return }
         view.addSubview(collectionView)
     }
     
