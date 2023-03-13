@@ -108,27 +108,22 @@ class LoginViewController: UIViewController {
                                   y: 0.0,
                                   width: view.width,
                                   height: view.height/3.0)
-        
         userNameTextField.frame = CGRect(x: 25,
                                          y: headerView.bottom + 10,
                                          width: view.width-50,
                                          height: 52.0)
-        
         passwordTextField.frame = CGRect(x: 25,
                                          y: userNameTextField.bottom + 10,
                                          width: view.width-50,
                                          height: 52.0)
-        
         loginButton.frame = CGRect(x: 25,
                                    y: passwordTextField.bottom + 10,
                                    width: view.width - 50,
                                    height: 52.0)
-        
         createAccountButton.frame = CGRect(x: 25,
                                            y: loginButton.bottom + 10,
                                            width: view.width - 50,
                                            height: 52.0)
-        
         privacyButton.frame = CGRect(x: 10,
                                      y: view.height-view.safeAreaInsets.bottom - 100,
                                      width: view.width - 20,
@@ -151,8 +146,6 @@ class LoginViewController: UIViewController {
                                  y: view.safeAreaInsets.top,
                                  width: headerView.width/2.0,
                                  height: headerView.height - view.safeAreaInsets.top)
-        
-        
         backgroundView.frame = headerView.bounds
     }
     
