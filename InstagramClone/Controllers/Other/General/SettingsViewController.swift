@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 struct SettingCellModal {
     let title: String
@@ -39,25 +40,25 @@ class SettingsViewController: UIViewController {
         
         data.append([
             SettingCellModal(title: "Edit Profile") { [weak self] in
-                self?.didTapLogOut()
+                self?.didTapEditProfile()
             },
             SettingCellModal(title: "Invite Friends") { [weak self] in
-                self?.didTapLogOut()
+                self?.didTapinviteFriends()
             },
             SettingCellModal(title: "Save Original Posts") { [weak self] in
-                self?.didTapLogOut()
+                self?.didTapsaveOriginalPosts()
             }
         ])
         
         data.append([
             SettingCellModal(title: "Terms of Service") { [weak self] in
-                self?.didTapLogOut()
+                self?.openURL(type: .terms)
             },
             SettingCellModal(title: "Privacy Policy") { [weak self] in
-                self?.didTapLogOut()
+                self?.openURL(type: .privacy)
             },
             SettingCellModal(title: "Help / Feedback") { [weak self] in
-                self?.didTapLogOut()
+                self?.openURL(type: .help)
             }
         ])
 
@@ -66,6 +67,44 @@ class SettingsViewController: UIViewController {
                 self?.didTapLogOut()
             }
         ])
+        
+    }
+    
+    enum SettingsURLType {
+        case terms, privacy, help
+    }
+    
+    private func openURL(type: SettingsURLType) {
+        let urlString: String
+            switch type {
+            case .help: urlString = "https://help.instagram.com/"
+            case .privacy: urlString = "https://help.instagram.com/196883487377501"
+            case .terms: urlString = "https://help.instagram.com/581066165581870"
+            }
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        }
+    
+    private func didTapHelp() {
+        
+    }
+    
+    private func didTapTerms() {
+        
+    }
+    
+    private func didTapsaveOriginalPosts() {
+        
+    }
+    
+    private func didTapinviteFriends() {
+        
+    }
+    
+    private func didTapEditProfile() {
         
     }
     
