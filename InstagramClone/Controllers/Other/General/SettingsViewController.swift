@@ -36,12 +36,41 @@ class SettingsViewController: UIViewController {
     }
     
     private func configureModels() {
-        let section = [
+        
+        data.append([
+            SettingCellModal(title: "Edit Profile") { [weak self] in
+                self?.didTapLogOut()
+            },
+            SettingCellModal(title: "Invite Friends") { [weak self] in
+                self?.didTapLogOut()
+            },
+            SettingCellModal(title: "Save Original Posts") { [weak self] in
+                self?.didTapLogOut()
+            }
+        ])
+        
+        data.append([
+            SettingCellModal(title: "Terms of Service") { [weak self] in
+                self?.didTapLogOut()
+            },
+            SettingCellModal(title: "Privacy Policy") { [weak self] in
+                self?.didTapLogOut()
+            },
+            SettingCellModal(title: "Help / Feedback") { [weak self] in
+                self?.didTapLogOut()
+            }
+        ])
+
+        data.append([
             SettingCellModal(title: "Log Out") { [weak self] in
                 self?.didTapLogOut()
             }
-        ]
-        data.append(section)
+        ])
+        
+    }
+    
+    private func didTapPrivacy() {
+        
     }
     
     private func didTapLogOut() {
@@ -49,6 +78,7 @@ class SettingsViewController: UIViewController {
         let actionSheet = UIAlertController(title: "Log Out",
                                             message: "Are you sure to want log out?",
                                             preferredStyle: .actionSheet)
+        
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         actionSheet.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
             AuthManager.shared.logOut { success in
