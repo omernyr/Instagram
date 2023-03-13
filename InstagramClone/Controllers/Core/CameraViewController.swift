@@ -12,6 +12,8 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Navigasyon çubuğunu gizlemek için
         navigationController?.setNavigationBarHidden(true, animated: true)
         view.backgroundColor = .systemBackground
     }
