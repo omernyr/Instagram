@@ -100,6 +100,7 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: FormTableViewCell.identifier,
                                                  for: indexPath) as! FormTableViewCell
         cell.configure(with: model)
+        cell.delegate = self
         return cell
     }
     
@@ -109,7 +110,7 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
     }
     
     @objc private func didTapSave() {
-        
+        dismiss(animated: true)
     }
     
     @objc private func didTapCancel() {
@@ -132,5 +133,10 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
         actionSheet.popoverPresentationController?.sourceRect = view.bounds
         present(actionSheet, animated: true)
     }
+}
 
+extension EditProfileViewController: FormTableViewCellDelegate {
+    func formTableViewCell(_ cell: FormTableViewCell, didUpdateField updateModel: EditProfileFormModel) {
+        print(updateModel.value ?? "nil")
+    }
 }
